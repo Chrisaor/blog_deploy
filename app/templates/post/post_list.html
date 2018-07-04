@@ -8,10 +8,9 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
                     <p class="card-text">{{ post.content|truncatechars:200 }}</p>
-                    <a href="#" class="btn btn-primary">Go detail</a>
+                    <a href="{% url 'post-detail' post.id %}" class="btn btn-primary">Go detail</a>
                 </div>
             </div>
         </div>
-
     {% endfor %}
 {% endblock %}
