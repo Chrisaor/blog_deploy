@@ -6,7 +6,7 @@
             <div class="card">
                 <h5 class="card-header">{{ post.published_date.date }}</h5>
                 <div class="card-body">
-                    <h5 class="card-title">{{ post.title }}</h5>
+                    <a href="{% url 'post-detail' post.id %}"><h5 class="card-title">{{ post.title }}</h5></a>
                     <p class="card-text">{{ post.content|truncatechars:200 }}</p>
                     <a href="{% url 'post-detail' post.id %}" class="btn btn-primary">Go detail</a>
                 </div>

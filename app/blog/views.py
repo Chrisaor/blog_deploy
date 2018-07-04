@@ -3,6 +3,8 @@ from django.shortcuts import render
 
 from blog.models import Post
 
+def about(request):
+    return render(request, 'post/about.html')
 
 def post_list(request):
     posts = Post.objects.all()
