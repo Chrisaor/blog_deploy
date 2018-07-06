@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <br>
+                <div class="input-group input-group-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Title</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" name="title">
+                </div>
+                <br>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Content</span>
+                    </div>
+                    <textarea class="form-control" aria-label="With textarea" name="content"></textarea>
+                </div>
+                <br>
+                <button class="btn btn-primary">Write</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
